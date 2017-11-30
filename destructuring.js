@@ -11,17 +11,16 @@ var carDetails = {
   year: 1994
 }
 
-// CODE HERE
+  // CODE HERE
+var {color, make, model, year} = carDetails;
 
 
-// ========================
-
-
-// In the function below named greeting, it is receiving an object as a parameter. Use object destructuring to save the object properties to new variables. The property names are firstName, lastName, and title. Return the concatenated string.
+// In the function below named greeting, it is receiving an object as a parameter. Use object destructuring to save the object properties to new variables. 
+// The property names are firstName, lastName, and title. Return the concatenated string.
 
 function greeting( obj ) {
   // CODE HERE
-  
+  var {firstName, lastName, title} = obj;
   return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
 }
 
@@ -29,7 +28,8 @@ function greeting( obj ) {
 // ========================
 
 
-// Write a function called totalPopulation that will take in an object. That object will have 4 properties named utah, california, texas and arizona. The property values will be numbers. Use object destructuring to save the property values to new variables. Sum up the values and return the total number.
+// Write a function called totalPopulation that will take in an object. That object will have 4 properties named utah, california, texas and arizona.
+// The property values will be numbers. Use object destructuring to save the property values to new variables. Sum up the values and return the total number.
 
   // CODE HERE
 

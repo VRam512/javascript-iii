@@ -37,6 +37,24 @@ var employees = [{
 //  3. Return the updated employee array.
 
 // Code here
+var employeeUpdater = () => {
+  for (var i = 0; i < employees.length; i++){
+    if (employees[i].firstName === "Theo"){
+      employees.splice(i,1);
+    } else if (employees[i].firstName === "Lorie"){
+      employees[i].department = "HR";
+    }
+  } return employees;
+};
+
+// 
+// someArray.shift(); // first element removed
+// 
+// someArray = someArray.slice(1); // first element removed
+// 
+// someArray.splice(0,1); // first element removed
+// 
+// someArray.pop(); // last element removed
 
 
 
@@ -47,16 +65,25 @@ var employees = [{
 // === PROBLEM 2 ==========
 
 
-// The array below represents IDs tied to reported workplace accidents. An employee accidentally entered in duplicates to array, making it look as though there are more accidents this year than there actually are. 
+// The array below represents IDs tied to reported workplace accidents. An employee accidentally entered in duplicates to array, 
+// making it look as though there are more accidents this year than there actually are. 
 // 1. Write a function called 'removeDuplicates' that will remove all duplicate entries in the workplaceAccidents array.
 // 2. Use nested for loops to check for duplicate numbers, and then remove the duplicates from the array.
 // 3. Return the updated array.
 
 var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
 
-// Code here
 
+var removeDuplicates = () => {
+  let sortedAccidents = workplaceAccidents.sort();
+  for (var i = 0; i < sortedAccidents.length - 1; i++){
+    if (sortedAccidents[i + 1] === sortedAccidents[i]){
+      sortedAccidents.splice(i+1,1);
+    }
+  }return sortedAccidents;
+};
 
+removeDuplicates();
 
 
 
